@@ -1,56 +1,47 @@
 body {
     background-color: #dedede;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 32px;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
+ul {
+    font-size: 20px;
 }
 
-p {
-    font-size: 25px;
-    font-family: Arial, sans-serif;
-}
-
-img {
-    width: 100%;
-}
-
-p {
+div {
+    display: inline-block;  /* Ensure the divs are inline with each other */
+    width: 24%;  /* 4 divs per row, each taking 24% of the width */
+    margin: 5px;
+    padding: 5px;
     text-align: center;
 }
 
 div img {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: auto;
+    width: 100%;  /* Ensure images take up 100% of the div's width */
+    height: auto;  /* Maintain aspect ratio */
+    max-height: 200px;  /* Set a max height to keep images manageable */
 }
 
-div {
-    display: inline-block;
-    width: 24%;
-    margin: 5px;
-    padding: 2px;
+.label {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #333;
 }
 
 /* Media Query #1 - Tablet View (Triggers at 772px) */
 @media screen and (max-width: 772px) {
     div {
         width: 45vw; /* 45% of the viewport width */
-        margin: 10px; /* Adjusted margin for better spacing */
-        padding: 10px; /* Added padding for consistency */
+        margin: 10px; /* Adjust margins for spacing */
+        padding: 10px; /* Adjust padding for consistency */
     }
 
     div img {
-        height: 30vh; /* Limit the image height to 30% of the viewport height */
+        max-height: 30vh; /* Limit image height to 30% of the viewport height */
         width: auto; /* Maintain aspect ratio */
     }
 }
